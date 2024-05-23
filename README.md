@@ -1,11 +1,13 @@
-# KDataAssertions
+# Assertainty
 
-KDataAssertions is a Kotlin library for writing and executing data quality test cases against tabular data of an arbitrary size. 
+_"Be certain about your data"_
+
+Assertainty is a Kotlin library for writing and executing data quality test cases against tabular data of an arbitrary size. 
 It is built on, and integrates with, popular data systems/connections like Spark and JDBC, as well as test harnesses like JUnit and Kotest. 
 Because it relies on pre-existing data processing systems, it can scale to as large as the existing infrastructure. 
-If you can query it, KDataAssertions can test it.
+If you can query it, Assertainty can test it.
 
-KDataAssertions provides a simple DSL, an example of which can be seen below:
+Assertainty provides a simple DSL, an example of which can be seen below:
 
 ```kotlin
 @TestFactory
@@ -24,12 +26,12 @@ fun test() = dataAssertionTestFactory {
 
 ## How it works
 
-KDataAssertions seeks to bridge the gap between the scale and power of distributed systems, and the convenience and tooling of local development.
+Assertainty seeks to bridge the gap between the scale and power of distributed systems, and the convenience and tooling of local development.
 It accomplishes this by splitting the workload; code locally and compute remotely.
-KDataAssertions generates aggregation queries to submit to existing systems, and then processes assertions on the resulting aggregated metrics.
+Assertainty generates aggregation queries to submit to existing systems, and then processes assertions on the resulting aggregated metrics.
 
 #### Benefits
-This paradigm makes KDataAssertions exceptionally lightweight, in many ways.
+This paradigm makes Assertainty exceptionally lightweight, in many ways.
 * From an infrastructure perspective, it requires no, or next to no, new infrastructure.
 It can either be run locally on a developer's machine, or on a single small node within a data pipeline. 
 All the heavy computation is offloaded to your existing infrastructure.
@@ -38,13 +40,13 @@ All the heavy computation is offloaded to your existing infrastructure.
 It integrates with tools and frameworks developers are already familiar with.
 
 #### Limitations
-The primary limitation of KDataAssertions is that it operates on aggregations of your data rather than individual rows.
+The primary limitation of Assertainty is that it operates on aggregations of your data rather than individual rows.
 This generally means that test failures report in the form of how many rows failed the assertion, or what some total sum or count was, and not what specific rows led to failures.
 However, well crafted assertions will give you very good coverage over your data, and a specific place to start your investigation.
 
 ## Plugins
 
-KDataAssertions is built on a core-and-plugin model, where the core module is generic in types `Table` and `Column`, and plugin modules inherit from it to implement specific integrations.
+Assertainty is built on a core-and-plugin model, where the core module is generic in types `Table` and `Column`, and plugin modules inherit from it to implement specific integrations.
 There are data source plugins that enable connections to specific engines/connections, and testing plugins that integrate with test harnesses.
 
 ### Data Source Plugins
@@ -117,7 +119,7 @@ The Test Plugins know how to convert this to test cases for their respective tes
 
 Because the `assert` block returns an instance of `AssertionBlockResults`, it can be used directly, even outside of formal tests.
 One use case would be to insert data validation checks into a pipeline, and then report failures or block downstream processing based on the results.
-KDataAssertions provides a few convenience functions in this vein.
+Assertainty provides a few convenience functions in this vein.
 
 ```Kotlin
 table.assert {

@@ -1,6 +1,6 @@
 # Exposed Plugin
 
-This plugin enables KDataAssertions integration with [Exposed](https://jetbrains.github.io/Exposed/home.html).
+This plugin enables Assertainty integration with [Exposed](https://jetbrains.github.io/Exposed/home.html).
 It is parameterized in `org.jetbrains.exposed.sql.Table` and `org.jetbrains.exposed.sql.Expression`.
 
 ## Usage

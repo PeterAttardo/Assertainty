@@ -1,6 +1,6 @@
 # Spark Plugin
 
-This plugin enables KDataAssertions integration with [Apache Spark](https://spark.apache.org/), using the [Kotlin Spark API](https://github.com/Kotlin/kotlin-spark-api).
+This plugin enables Assertainty integration with [Apache Spark](https://spark.apache.org/), using the [Kotlin Spark API](https://github.com/Kotlin/kotlin-spark-api).
 It is parameterized in `org.apache.spark.sql.Dataset` and `org.apache.spark.sql.Column`.
 
 ## Usage

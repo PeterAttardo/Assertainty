@@ -1,6 +1,6 @@
 # Ktorm Plugin
 
-This plugin enables KDataAssertions integration with [Ktorm](https://www.ktorm.org/).
+This plugin enables Assertainty integration with [Ktorm](https://www.ktorm.org/).
 It is parameterized in `org.ktorm.dsl.QuerySource` and `org.ktorm.schema.ColumnDeclaring`.
 
 ## Usage
@@ -25,5 +25,5 @@ source.assert(where = table.column5 eq "2000-01-01") { // will apply the where f
 ```
 >[!NOTE]
 > Ktorm does not support subqueries at this time. 
-> This means that KDataAssertions cannot accept an existing `Query`, and must be fed the root `QuerySource`.
+> This means that Assertainty cannot accept an existing `Query`, and must be fed the root `QuerySource`.
 > Any desired filtering on this `QuerySource` can be accomplished by passing in a value to the `where` parameter of the `assert` call.

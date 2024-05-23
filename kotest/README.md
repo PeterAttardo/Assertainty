@@ -1,6 +1,6 @@
 # Kotest Plugin
 
-This plugin translates KDataAssertions `assert` blocks into Kotest tests.
+This plugin translates Assertainty `assert` blocks into Kotest tests.
 It is built as an extension function on Kotest's `RootScope`
 
 ## Usage
@@ -27,5 +27,5 @@ class DataTest : StringSpec({
 
 >[!WARNING]
 > If using the Exposed plugin, any attempt to serialize a column outside of a `transaction` block will raise an exception.
-> This includes when KDataAssertions creates tests that include the columns in the name.
+> This includes when Assertainty creates tests that include the columns in the name.
 > To address this, either wrap the test definitions in a transaction block, or implement a safe `columnSerializer` function.
