@@ -50,15 +50,15 @@ There are data source plugins that enable connections to specific engines/connec
 ### Data Source Plugins
 
 Currently, there are four plugins enabling connections to big data systems:
-* [Spark](spark/README.md) for working with [Apache Spark](https://spark.apache.org/) dataframes
-* [Exposed](exposed/README.md) for working with the [Jetbrains Exposed](https://jetbrains.github.io/Exposed/home.html) SQL ORM library
-* [Ktorm](spark/README.md) for working with the [Ktorm](https://www.ktorm.org/) SQL ORM library
-* [Raw SQL](rawsql/README.md) is a thin wrapper around raw SQL strings and a user-provided connection
+* [Spark](spark/) for working with [Apache Spark](https://spark.apache.org/) dataframes
+* [Exposed](exposed/) for working with the [Jetbrains Exposed](https://jetbrains.github.io/Exposed/home.html) SQL ORM library
+* [Ktorm](spark/) for working with the [Ktorm](https://www.ktorm.org/) SQL ORM library
+* [Raw SQL](rawsql/) is a thin wrapper around raw SQL strings and a user-provided connection
 
 ### Test Plugins
 
-* [JUnit](junit/README.md) for writing tests in JUnit
-* [Kotest](kotest/README.md) for writing tests in Kotest
+* [JUnit](junit/) for writing tests in JUnit
+* [Kotest](kotest/) for writing tests in Kotest
 
 For specific details on the use of these plugins, please click the links above.
 
