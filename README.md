@@ -2,7 +2,7 @@
 
 _"Be certain about your data"_
 
-Assertainty is a Kotlin library for writing and executing data quality test cases against tabular data of an arbitrary size. 
+Assertainty is a Kotlin library for writing and executing data quality tests against tabular data of an arbitrary size. 
 It is built on, and integrates with, popular data systems/connections like Spark and JDBC, as well as test harnesses like JUnit and Kotest. 
 Because it relies on pre-existing data processing systems, it can scale to as large as the existing infrastructure. 
 If you can query it, Assertainty can test it.
@@ -27,13 +27,13 @@ fun test() = dataAssertionTestFactory {
 ## How it works
 
 Assertainty seeks to bridge the gap between the scale and power of distributed systems, and the convenience and tooling of local development.
-It accomplishes this by splitting the workload; code locally and compute remotely.
+It accomplishes this by splitting the workload: code locally and compute remotely.
 Assertainty generates aggregation queries to submit to existing systems, and then processes assertions on the resulting aggregated metrics.
 
 #### Benefits
 This paradigm makes Assertainty exceptionally lightweight, in many ways.
 * From an infrastructure perspective, it requires no, or next to no, new infrastructure.
-It can either be run locally on a developer's machine, or on a single small node within a data pipeline. 
+It can be run either locally on a developer's machine, or on a single small node within a data pipeline. 
 All the heavy computation is offloaded to your existing infrastructure.
 * From a bandwidth perspective, not even a sample of the full data is transferred; only a small summary dataset of aggregated metrics is required.
 * From a cognitive load perspective, new learnings are absolutely minimal.
@@ -133,3 +133,7 @@ table.assert {
     }
 }
 ```
+
+### Examples
+
+To see end-to-end examples of Assertainty in use, please check out the included [example project](example/)
