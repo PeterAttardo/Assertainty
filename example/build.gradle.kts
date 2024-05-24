@@ -4,8 +4,6 @@ plugins {
 
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-    testImplementation("io.mockk:mockk:1.13.11")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.10.2")
 
     testImplementation(project(":junit"))
     testImplementation(project(":kotest"))
