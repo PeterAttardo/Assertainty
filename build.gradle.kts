@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 }
 
-group = "com.attardo.assertainty"
+group = "io.github.peterattardo.assertainty"
 version = "0.1.0"
 
 repositories {
@@ -48,7 +48,10 @@ subprojects {
             publications {
                 create<MavenPublication>(project.name) {
                     groupId = rootProject.group.toString()
-                    artifactId = project.name
+                    artifactId = buildString {
+                        append(project.name)
+                        if(project.path != ":core") append("-plugin")
+                    }
                     version = rootProject.version.toString()
 
                     from(components["java"])
