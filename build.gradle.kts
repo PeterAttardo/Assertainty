@@ -1,9 +1,10 @@
 plugins {
     kotlin("jvm") version "1.9.22"
+    `maven-publish`
 }
 
-group = "com.attardo"
-version = "0.1.0-SNAPSHOT"
+group = "com.attardo.assertainty"
+version = "0.1.0"
 
 repositories {
     mavenCentral()
@@ -23,6 +24,7 @@ kotlin {
 subprojects {
     apply(plugin = "kotlin")
     apply(plugin = "java-library")
+    apply(plugin = "maven-publish")
 
     repositories {
         mavenCentral()
@@ -31,8 +33,8 @@ subprojects {
     group = rootProject.group
     version = rootProject.version
 
-    dependencies {
-        if(path != ":example") {
+    if(path != ":example") {
+        dependencies {
             testImplementation("org.jetbrains.kotlin:kotlin-test")
             testImplementation("io.mockk:mockk:1.13.11")
             testImplementation("org.junit.jupiter:junit-jupiter-params:5.10.2")
@@ -42,7 +44,19 @@ subprojects {
                 testImplementation(testFixtures(project(":core")))
             }
         }
+        publishing {
+            publications {
+                create<MavenPublication>(project.name) {
+                    groupId = rootProject.group.toString()
+                    artifactId = project.name
+                    version = rootProject.version.toString()
+
+                    from(components["java"])
+                }
+            }
+        }
     }
+
     tasks.test {
         useJUnitPlatform()
     }
