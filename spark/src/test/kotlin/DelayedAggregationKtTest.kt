@@ -25,7 +25,7 @@ class DelayedAggregationKtTest {
         spark = SparkSession
             .builder()
             .master(SparkConf().get("spark.master", "local[*]"))
-            .appName("DataAssertions")
+            .appName("Assertainty")
             .getOrCreate()
     }
 
