@@ -1,7 +1,7 @@
-import com.attardo.datavalidation.core.AssertBlockResults
-import com.attardo.datavalidation.core.ColumnMethods
-import com.attardo.datavalidation.core.ComputeBlockResults
-import com.attardo.datavalidation.core.TableScope
+import com.attardo.assertainty.core.AssertBlockResults
+import com.attardo.assertainty.core.ColumnMethods
+import com.attardo.assertainty.core.ComputeBlockResults
+import com.attardo.assertainty.core.TableScope
 
 
 fun String.assert(wrapper: SqlWrapper, dialect: SqlDialect = DefaultSqlDialect, init: RawSqlTableScope.() -> Unit): AssertBlockResults<String> {

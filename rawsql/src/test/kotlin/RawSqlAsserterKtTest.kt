@@ -1,6 +1,6 @@
-import com.attardo.datavalidation.core.DataAssertion
-import com.attardo.datavalidation.core.MaxConditionCountDataAssertion
-import com.attardo.datavalidation.core.MinCountDataAssertion
+import com.attardo.assertainty.core.DataAssertion
+import com.attardo.assertainty.core.MaxConditionCountDataAssertion
+import com.attardo.assertainty.core.MinCountDataAssertion
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.params.ParameterizedTest

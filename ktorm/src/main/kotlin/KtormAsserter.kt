@@ -1,7 +1,7 @@
-import com.attardo.datavalidation.core.AssertBlockResults
-import com.attardo.datavalidation.core.ComputeBlockResults
-import com.attardo.datavalidation.core.Computed
-import com.attardo.datavalidation.core.DataAssertion
+import com.attardo.assertainty.core.AssertBlockResults
+import com.attardo.assertainty.core.ComputeBlockResults
+import com.attardo.assertainty.core.Computed
+import com.attardo.assertainty.core.DataAssertion
 import org.ktorm.database.Database
 import org.ktorm.dsl.*
 import org.ktorm.schema.BaseTable

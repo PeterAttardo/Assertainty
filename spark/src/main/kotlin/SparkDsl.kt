@@ -1,8 +1,8 @@
-package com.attardo.datavalidation.spark
+package com.attardo.assertainty.spark
 
-import com.attardo.datavalidation.core.AssertBlockResults
-import com.attardo.datavalidation.core.ComputeBlockResults
-import com.attardo.datavalidation.core.TableScope
+import com.attardo.assertainty.core.AssertBlockResults
+import com.attardo.assertainty.core.ComputeBlockResults
+import com.attardo.assertainty.core.TableScope
 import org.apache.spark.sql.Column
 import org.apache.spark.sql.Dataset
 

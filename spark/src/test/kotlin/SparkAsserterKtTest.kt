@@ -1,10 +1,10 @@
-import com.attardo.datavalidation.core.DataAssertion
-import com.attardo.datavalidation.core.MaxConditionCountDataAssertion
-import com.attardo.datavalidation.core.MinCountDataAssertion
-import com.attardo.datavalidation.spark.SparkColumnMethods
-import com.attardo.datavalidation.spark.computeSeparateQueries
-import com.attardo.datavalidation.spark.computeSingleQuery
-import com.attardo.datavalidation.spark.getName
+import com.attardo.assertainty.core.DataAssertion
+import com.attardo.assertainty.core.MaxConditionCountDataAssertion
+import com.attardo.assertainty.core.MinCountDataAssertion
+import com.attardo.assertainty.spark.SparkColumnMethods
+import com.attardo.assertainty.spark.computeSeparateQueries
+import com.attardo.assertainty.spark.computeSingleQuery
+import com.attardo.assertainty.spark.getName
 import io.mockk.MockKMatcherScope
 import io.mockk.every
 import io.mockk.spyk

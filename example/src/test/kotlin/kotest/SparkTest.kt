@@ -1,7 +1,7 @@
 package kotest
 
-import com.attardo.datavalidation.kotest.invoke
-import com.attardo.datavalidation.spark.assert
+import com.attardo.assertainty.kotest.invoke
+import com.attardo.assertainty.spark.assert
 import io.kotest.core.spec.style.StringSpec
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.Column

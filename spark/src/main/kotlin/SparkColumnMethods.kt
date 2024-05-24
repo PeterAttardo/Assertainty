@@ -1,6 +1,6 @@
-package com.attardo.datavalidation.spark
+package com.attardo.assertainty.spark
 
-import com.attardo.datavalidation.core.ColumnMethods
+import com.attardo.assertainty.core.ColumnMethods
 import org.apache.spark.sql.Column
 import org.apache.spark.sql.functions
 import org.apache.spark.sql.types.DataTypes

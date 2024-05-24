@@ -1,4 +1,4 @@
-package com.attardo.datavalidation.core
+package com.attardo.assertainty.core
 
 abstract class DataAssertion<Column>(val metricColumns: List<Column>, val description : String? = null) {
     constructor(vararg metricColumns: Column, description: String? = null) : this(metricColumns.toList(), description)

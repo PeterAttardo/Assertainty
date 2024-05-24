@@ -1,4 +1,4 @@
-import com.attardo.datavalidation.core.ColumnMethods
+import com.attardo.assertainty.core.ColumnMethods
 
 interface SqlDialect : ColumnMethods<String> {
     fun select(columns: List<String>, from: String, groupBy: List<String>): String

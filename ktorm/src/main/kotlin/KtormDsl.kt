@@ -1,6 +1,6 @@
-import com.attardo.datavalidation.core.AssertBlockResults
-import com.attardo.datavalidation.core.ComputeBlockResults
-import com.attardo.datavalidation.core.TableScope
+import com.attardo.assertainty.core.AssertBlockResults
+import com.attardo.assertainty.core.ComputeBlockResults
+import com.attardo.assertainty.core.TableScope
 import org.ktorm.database.Database
 import org.ktorm.dsl.QuerySource
 import org.ktorm.dsl.from

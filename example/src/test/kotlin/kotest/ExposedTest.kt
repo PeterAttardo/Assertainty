@@ -2,7 +2,7 @@ package kotest
 
 import assert
 import columnSerializer
-import com.attardo.datavalidation.kotest.invoke
+import com.attardo.assertainty.kotest.invoke
 import io.kotest.core.spec.style.StringSpec
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.Expression

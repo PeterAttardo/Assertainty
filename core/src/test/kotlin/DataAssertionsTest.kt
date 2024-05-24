@@ -1,4 +1,4 @@
-import com.attardo.datavalidation.core.*
+import com.attardo.assertainty.core.*
 import io.mockk.clearAllMocks
 import io.mockk.every
 import io.mockk.mockkStatic

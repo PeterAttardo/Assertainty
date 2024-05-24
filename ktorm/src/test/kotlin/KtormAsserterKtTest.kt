@@ -1,6 +1,6 @@
-import com.attardo.datavalidation.core.DataAssertion
-import com.attardo.datavalidation.core.MaxConditionCountDataAssertion
-import com.attardo.datavalidation.core.MinCountDataAssertion
+import com.attardo.assertainty.core.DataAssertion
+import com.attardo.assertainty.core.MaxConditionCountDataAssertion
+import com.attardo.assertainty.core.MinCountDataAssertion
 import io.mockk.every
 import io.mockk.mockkStatic
 import io.mockk.spyk

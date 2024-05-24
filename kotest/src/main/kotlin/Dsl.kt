@@ -1,6 +1,6 @@
-package com.attardo.datavalidation.kotest
+package com.attardo.assertainty.kotest
 
-import com.attardo.datavalidation.core.AssertBlockResults
+import com.attardo.assertainty.core.AssertBlockResults
 import io.kotest.core.names.TestName
 import io.kotest.core.spec.style.scopes.ContainerScope
 import io.kotest.core.spec.style.scopes.FunSpecContainerScope

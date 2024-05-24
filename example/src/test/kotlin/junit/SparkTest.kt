@@ -1,7 +1,7 @@
 package junit
 
-import com.attardo.datavalidation.junit.dataAssertionTestFactory
-import com.attardo.datavalidation.spark.assert
+import com.attardo.assertainty.junit.dataAssertionTestFactory
+import com.attardo.assertainty.spark.assert
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.Column
 import org.apache.spark.sql.SparkSession

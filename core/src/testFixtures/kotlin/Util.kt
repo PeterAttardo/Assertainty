@@ -1,6 +1,6 @@
-import com.attardo.datavalidation.core.ComputeBlockResults
-import com.attardo.datavalidation.core.Computed
-import com.attardo.datavalidation.core.DataAssertion
+import com.attardo.assertainty.core.ComputeBlockResults
+import com.attardo.assertainty.core.Computed
+import com.attardo.assertainty.core.DataAssertion
 
 fun <Column> expected(
     assertions: List<DataAssertion<Column>>,

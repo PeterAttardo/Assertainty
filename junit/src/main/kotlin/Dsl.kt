@@ -1,7 +1,7 @@
-package com.attardo.datavalidation.junit
+package com.attardo.assertainty.junit
 
-import com.attardo.datavalidation.core.AssertBlockResults
-import com.attardo.datavalidation.core.DataAssertionResult
+import com.attardo.assertainty.core.AssertBlockResults
+import com.attardo.assertainty.core.DataAssertionResult
 import org.junit.jupiter.api.DynamicContainer
 import org.junit.jupiter.api.DynamicNode
 import org.junit.jupiter.api.DynamicTest

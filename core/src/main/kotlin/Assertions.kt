@@ -1,5 +1,5 @@
 
-package com.attardo.datavalidation.core
+package com.attardo.assertainty.core
 
 import kotlin.test.Asserter
 import kotlin.test.asserter

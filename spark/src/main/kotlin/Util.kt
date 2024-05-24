@@ -1,4 +1,4 @@
-package com.attardo.datavalidation.spark
+package com.attardo.assertainty.spark
 
 import org.apache.spark.sql.Column
 import org.apache.spark.sql.Dataset

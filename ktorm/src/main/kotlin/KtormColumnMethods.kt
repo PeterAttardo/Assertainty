@@ -1,4 +1,4 @@
-import com.attardo.datavalidation.core.ColumnMethods
+import com.attardo.assertainty.core.ColumnMethods
 import org.ktorm.dsl.*
 import org.ktorm.schema.ColumnDeclaring
 import org.ktorm.schema.DoubleSqlType

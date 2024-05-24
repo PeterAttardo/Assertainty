@@ -2,7 +2,7 @@ package kotest
 
 import JDBCSqlWrapper
 import assert
-import com.attardo.datavalidation.kotest.invoke
+import com.attardo.assertainty.kotest.invoke
 import io.kotest.core.spec.style.StringSpec
 
 

@@ -2,7 +2,7 @@ package junit
 
 import assert
 import columnSerializer
-import com.attardo.datavalidation.junit.dataAssertionTestFactory
+import com.attardo.assertainty.junit.dataAssertionTestFactory
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.greater

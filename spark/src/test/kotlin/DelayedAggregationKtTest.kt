@@ -1,6 +1,6 @@
-import com.attardo.datavalidation.spark.DelayedAggregation
-import com.attardo.datavalidation.spark.agg
-import com.attardo.datavalidation.spark.singleQuery
+import com.attardo.assertainty.spark.DelayedAggregation
+import com.attardo.assertainty.spark.agg
+import com.attardo.assertainty.spark.singleQuery
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.Column
 import org.apache.spark.sql.Dataset

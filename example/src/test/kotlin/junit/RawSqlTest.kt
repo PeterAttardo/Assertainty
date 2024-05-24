@@ -3,7 +3,7 @@ package junit
 import JDBCSqlWrapper
 import SqlWrapper
 import assert
-import com.attardo.datavalidation.junit.dataAssertionTestFactory
+import com.attardo.assertainty.junit.dataAssertionTestFactory
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.TestFactory
 import org.junit.jupiter.api.TestInstance

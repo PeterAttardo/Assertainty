@@ -1,7 +1,7 @@
 package kotest
 
 import assert
-import com.attardo.datavalidation.kotest.invoke
+import com.attardo.assertainty.kotest.invoke
 import io.kotest.core.spec.style.StringSpec
 import org.ktorm.database.Database
 import org.ktorm.dsl.eq

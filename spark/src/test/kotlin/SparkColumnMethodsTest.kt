@@ -1,5 +1,5 @@
-import com.attardo.datavalidation.spark.SparkColumnMethods
-import com.attardo.datavalidation.spark.toKotlinList
+import com.attardo.assertainty.spark.SparkColumnMethods
+import com.attardo.assertainty.spark.toKotlinList
 import org.apache.spark.sql.Column
 import org.apache.spark.sql.catalyst.analysis.UnresolvedFunction
 import org.junit.jupiter.api.Assertions.assertEquals

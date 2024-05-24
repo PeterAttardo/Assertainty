@@ -1,4 +1,4 @@
-import com.attardo.datavalidation.core.ColumnMethods
+import com.attardo.assertainty.core.ColumnMethods
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.div
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.isNull
