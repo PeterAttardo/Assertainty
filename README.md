@@ -54,7 +54,7 @@ There are data source plugins that enable connections to specific engines/connec
 Currently, there are four plugins enabling connections to big data systems:
 * [Spark](spark/) for working with [Apache Spark](https://spark.apache.org/) dataframes
 * [Exposed](exposed/) for working with the [Jetbrains Exposed](https://jetbrains.github.io/Exposed/home.html) SQL ORM library
-* [Ktorm](spark/) for working with the [Ktorm](https://www.ktorm.org/) SQL ORM library
+* [Ktorm](ktorm/) for working with the [Ktorm](https://www.ktorm.org/) SQL ORM library
 * [Raw SQL](rawsql/) is a thin wrapper around raw SQL strings and a user-provided connection
 
 ### Test Plugins
