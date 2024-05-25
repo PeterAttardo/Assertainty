@@ -42,7 +42,7 @@ It integrates with tools and frameworks developers are already familiar with.
 #### Limitations
 The primary limitation of Assertainty is that it operates on aggregations of your data rather than individual rows.
 This generally means that test failures report in the form of how many rows failed the assertion, or what some total sum or count was, and not what specific rows led to failures.
-However, well crafted assertions will give you very good coverage over your data, and a specific place to start your investigation.
+However, well-crafted assertions will give you very good coverage over your data, and a specific place to start your investigation.
 
 ## Plugins
 
