@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.support.uppercaseFirstChar
+
 plugins {
     kotlin("jvm") version "1.9.22"
     `maven-publish`
@@ -44,6 +46,10 @@ subprojects {
                 testImplementation(testFixtures(project(":core")))
             }
         }
+        java {
+            withJavadocJar()
+            withSourcesJar()
+        }
         publishing {
             publications {
                 create<MavenPublication>(project.name) {
@@ -55,6 +61,34 @@ subprojects {
                     version = rootProject.version.toString()
 
                     from(components["java"])
+                    pom {
+                        name = buildString {
+                            append("Assertainty")
+                            append(" - ")
+                            append(project.name.uppercaseFirstChar())
+                            if(project.path != ":core") append(" Plugin")
+                        }
+                        description = "Kotlin library for writing data quality tests."
+                        url = "https://github.com/PeterAttardo/Assertainty"
+                        licenses {
+                            license {
+                                name = "The Apache License, Version 2.0"
+                                url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                            }
+                        }
+                        developers {
+                            developer {
+                                id = "PeterAttardo"
+                                name = "Peter Attardo"
+                                url = "https://github.com/PeterAttardo/"
+                            }
+                        }
+                        scm {
+                            connection = "scm:git:git://github.com/PeterAttardo/Assertainty.git"
+                            developerConnection = "scm:git:ssh://github.com:PeterAttardo/Assertainty.git"
+                            url = "https://github.com/PeterAttardo/Assertainty/tree/master"
+                        }
+                    }
                 }
             }
         }
