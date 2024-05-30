@@ -1,12 +1,17 @@
 import org.gradle.kotlin.dsl.support.uppercaseFirstChar
+import java.io.FileInputStream
+import java.util.*
 
 plugins {
     kotlin("jvm") version "1.9.22"
     `maven-publish`
+    signing
+    id("com.gradleup.nmcp") version "0.0.7"
+
 }
 
 group = "io.github.peterattardo.assertainty"
-version = "0.1.0-SNAPSHOT"
+version = "0.1.0"
 
 repositories {
     mavenCentral()
@@ -23,13 +28,34 @@ kotlin {
     jvmToolchain(21)
 }
 
+val prop = Properties().apply {
+    load(FileInputStream(File(rootProject.rootDir, "local.properties")))
+}
+
+nmcp {
+    publishAllProjectsProbablyBreakingProjectIsolation {
+        username = prop.getProperty("SONATYPE_USERNAME")
+        password = prop.getProperty("SONATYPE_TOKEN")
+        publicationType = "USER_MANAGED"
+//        publicationType = "AUTOMATIC"
+    }
+}
+
 subprojects {
     apply(plugin = "kotlin")
     apply(plugin = "java-library")
     apply(plugin = "maven-publish")
+    apply(plugin = "signing")
 
     repositories {
         mavenCentral()
+    }
+
+    tasks.jar {
+        archiveBaseName.set(buildString {
+            append(project.name)
+            if(project.path != ":core") append("-plugin")
+        })
     }
 
     group = rootProject.group
@@ -49,6 +75,13 @@ subprojects {
         java {
             withJavadocJar()
             withSourcesJar()
+        }
+        signing {
+            project.setProperty("signing.gnupg.keyName", prop.getProperty("SIGNING_KEY_ID"))
+            project.setProperty("signing.gnupg.passphrase", prop.getProperty("SIGNING_PASSWORD"))
+
+            useGpgCmd()
+            sign(publishing.publications)
         }
         publishing {
             publications {
