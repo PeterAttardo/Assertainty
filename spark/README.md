@@ -3,6 +3,12 @@
 This plugin enables Assertainty integration with [Apache Spark](https://spark.apache.org/), using the [Kotlin Spark API](https://github.com/Kotlin/kotlin-spark-api).
 It is parameterized in `org.apache.spark.sql.Dataset` and `org.apache.spark.sql.Column`.
 
+### Gradle
+
+```Kotlin
+testImplementation("io.github.peterattardo.assertainty:spark-plugin:0.1.0")
+```
+
 ## Usage
 
 ```Kotlin

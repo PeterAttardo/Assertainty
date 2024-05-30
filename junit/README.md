@@ -3,6 +3,12 @@
 This plugin translates Assertainty `assert` blocks into JUnit tests.
 It is built around JUnit's `TestFactory` feature.
 
+### Gradle
+
+```Kotlin
+testImplementation("io.github.peterattardo.assertainty:junit-plugin:0.1.0")
+```
+
 ## Usage
 
 ```Kotlin

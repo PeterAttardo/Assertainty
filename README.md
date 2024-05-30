@@ -64,6 +64,21 @@ Currently, there are four plugins enabling connections to big data systems:
 
 For specific details on the use of these plugins, please click the links above.
 
+### Gradle
+
+Add one or more of the following plugins to your project's `build.gradle`
+
+```Kotlin
+//Test Plugins
+testImplementation("io.github.peterattardo.assertainty:junit-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:kotest-plugin:0.1.0")
+//Data Source Plugins
+testImplementation("io.github.peterattardo.assertainty:spark-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:rawsql-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:ktorm-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:exposed-plugin:0.1.0")
+```
+
 ## Usage
 
 As mentioned, `core` is parameterized in `Table` and `Column`. 

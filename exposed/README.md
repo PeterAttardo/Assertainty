@@ -3,6 +3,12 @@
 This plugin enables Assertainty integration with [Exposed](https://jetbrains.github.io/Exposed/home.html).
 It is parameterized in `org.jetbrains.exposed.sql.Table` and `org.jetbrains.exposed.sql.Expression`.
 
+### Gradle
+
+```Kotlin
+testImplementation("io.github.peterattardo.assertainty:exposed-plugin:0.1.0")
+```
+
 ## Usage
 
 ```Kotlin

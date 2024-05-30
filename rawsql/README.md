@@ -4,6 +4,12 @@ You drink your coffee black, you do the crossword puzzle in ink, and you don't s
 ORMs are for people who need to be reminded of the names and types of things. 
 The Raw SQL Plugin is parameterized in `String` and `String`; it's strings all the way down.
 
+### Gradle
+
+```Kotlin
+testImplementation("io.github.peterattardo.assertainty:rawsql-plugin:0.1.0")
+```
+
 ## Usage
 
 ```Kotlin

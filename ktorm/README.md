@@ -3,6 +3,12 @@
 This plugin enables Assertainty integration with [Ktorm](https://www.ktorm.org/).
 It is parameterized in `org.ktorm.dsl.QuerySource` and `org.ktorm.schema.ColumnDeclaring`.
 
+### Gradle
+
+```Kotlin
+testImplementation("io.github.peterattardo.assertainty:ktorm-plugin:0.1.0")
+```
+
 ## Usage
 
 ```Kotlin
