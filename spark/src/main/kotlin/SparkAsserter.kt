@@ -50,7 +50,6 @@ fun <T> computeSingleQuery(
         dataAssertions.forEach { assertion ->
             val metricColumns = assertion.metricColumns
             agg(metricColumns) { ds ->
-                println(ds)
                 assertion to ds.toListofLists().map { row ->
                     Computed(
                         groups = (groupingColumns zip row.take(groupingColumns.size)).toMap(),

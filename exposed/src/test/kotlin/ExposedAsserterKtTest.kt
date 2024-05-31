@@ -66,7 +66,7 @@ class ExposedAsserterKtTest {
                 listOf(tracks.genreId),
                 mapOf(
                     MinCountDataAssertion(100, ExposedColumnMethods) to listOf(
-                        listOf(1.toInt(), 1297L).apply {  forEach { println(it::class) }},
+                        listOf(1.toInt(), 1297L),
                         listOf(2.toInt(), 130L),
                         listOf(3.toInt(), 374L),
                         listOf(4.toInt(), 332L),

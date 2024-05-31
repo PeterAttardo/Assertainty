@@ -41,12 +41,6 @@ class KtormAsserterKtTest {
         val unitPrice = double("UnitPrice")
     }
 
-    @Test
-    fun boop() {
-        val col = sum(tracks.milliseconds).aliased("sumbum")
-        db.from(tracks).select(tracks.trackId, col).groupBy(tracks.trackId).asQuerySource(tracks).select(tracks.trackId, col).where(col gt 30000).sql.also(::println)
-    }
-
     @ParameterizedTest
     @MethodSource("computeArgs")
     fun compute(table: QuerySource, where: ColumnDeclaring<Boolean>?, groupColumns: List<ColumnDeclaring<*>>, results: Map<DataAssertion<ColumnDeclaring<*>>, List<List<Any>>>) {
