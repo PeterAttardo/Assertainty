@@ -13,7 +13,7 @@ testImplementation("io.github.peterattardo.assertainty:junit-plugin:0.1.0")
 
 ```Kotlin
 @TestFactory
-fun someKDataAssertionTests() = dataAssertionTestFactory { // opens a block with a `TestFactoryScope` receiver
+fun someKDataAssertionTests() = assertaintyTestFactory { // opens a block with a `TestFactoryScope` receiver
     columnSerializer { column ->
         // Default test names include the columns of the assertion. 
         // This optional function allows you to specify a more readable string representation of a column than its existing `toString()`

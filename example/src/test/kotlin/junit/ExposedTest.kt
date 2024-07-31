@@ -2,7 +2,7 @@ package junit
 
 import assert
 import columnSerializer
-import com.attardo.assertainty.junit.dataAssertionTestFactory
+import com.attardo.assertainty.junit.assertaintyTestFactory
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.greater
@@ -40,7 +40,7 @@ class ExposedTest {
     }
 
     @TestFactory
-    fun factory() = dataAssertionTestFactory {
+    fun factory() = assertaintyTestFactory {
         columnSerializer = db.columnSerializer()
 
         "test1" {

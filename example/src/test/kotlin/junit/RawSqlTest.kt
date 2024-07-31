@@ -3,7 +3,7 @@ package junit
 import JDBCSqlWrapper
 import SqlWrapper
 import assert
-import com.attardo.assertainty.junit.dataAssertionTestFactory
+import com.attardo.assertainty.junit.assertaintyTestFactory
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.TestFactory
 import org.junit.jupiter.api.TestInstance
@@ -20,7 +20,7 @@ class RawSqlTest {
     }
 
     @TestFactory
-    fun factory() = dataAssertionTestFactory {
+    fun factory() = assertaintyTestFactory {
         "test1" {
             "tracks".assert(wrapper) {
                 +"AlbumId"

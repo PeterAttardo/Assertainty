@@ -21,17 +21,17 @@ class TestFactoryScope<Column> {
     }
 }
 
-fun <Column> dataAssertionTestFactory(init: TestFactoryScope<Column>.() -> Unit) : List<DynamicNode> {
+fun <Column> assertaintyTestFactory(init: TestFactoryScope<Column>.() -> Unit) : List<DynamicNode> {
     val scope = TestFactoryScope<Column>()
     scope.init()
-    return dataAssertionTestFactory(scope.tests, scope.columnSerializer)
+    return assertaintyTestFactory(scope.tests, scope.columnSerializer)
 }
 
-fun <Column> dataAssertionTest(result: DataAssertionResult<Column>) {
+fun <Column> assertaintyTest(result: DataAssertionResult<Column>) {
     result.assertionError?.let { throw it }
 }
 
-fun <Column> dataAssertionTestFactory(tests: List<Pair<String, AssertBlockResults<Column>>>, columnSerializer: ((Column) -> String)? = null) : List<DynamicNode> {
+fun <Column> assertaintyTestFactory(tests: List<Pair<String, AssertBlockResults<Column>>>, columnSerializer: ((Column) -> String)? = null) : List<DynamicNode> {
     val serializer = columnSerializer ?: { it.toString() }
     return tests.map { (name, map) ->
         DynamicContainer.dynamicContainer(name, map.entries.map { (assertion, results) ->
@@ -39,14 +39,14 @@ fun <Column> dataAssertionTestFactory(tests: List<Pair<String, AssertBlockResult
             when (results.size) {
                 1 -> {
                     DynamicTest.dynamicTest(name) {
-                        dataAssertionTest(results[0])
+                        assertaintyTest(results[0])
                     }
                 }
 
                 else -> {
                     DynamicContainer.dynamicContainer(name, results.map {
                         DynamicTest.dynamicTest(it.computed.groups.mapKeys { (k, _) -> serializer(k) }.toString()) {
-                            dataAssertionTest(it)
+                            assertaintyTest(it)
                         }
                     })
                 }

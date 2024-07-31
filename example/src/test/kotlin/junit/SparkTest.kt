@@ -1,6 +1,6 @@
 package junit
 
-import com.attardo.assertainty.junit.dataAssertionTestFactory
+import com.attardo.assertainty.junit.assertaintyTestFactory
 import com.attardo.assertainty.spark.assert
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.Column
@@ -34,7 +34,7 @@ class SparkTest {
     }
 
     @TestFactory
-    fun factory() = dataAssertionTestFactory {
+    fun factory() = assertaintyTestFactory {
         "test1" {
             val table = sparkSession.read()
                 .option("driver", "org.sqlite.JDBC")

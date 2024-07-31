@@ -11,7 +11,7 @@ Assertainty provides a simple DSL, an example of which can be seen below:
 
 ```kotlin
 @TestFactory
-fun test() = dataAssertionTestFactory {
+fun test() = assertaintyTestFactory {
     "inspectData" {
         val table = // { code for selecting today's data }
         table.assert {
