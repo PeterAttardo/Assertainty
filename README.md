@@ -15,10 +15,10 @@ fun test() = assertaintyTestFactory {
     "inspectData" {
         val table = // { code for selecting today's data }
         table.assert {
-            min_count(10000) //we expect at least 10,000 new rows per day 
+            minCount(10000) //we expect at least 10,000 new rows per day 
             unique(table.id) //we expect the ids to never collide
             always(table.email regexp_like "^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$") //we expect emails to be valid
-            max_ratio_when(table.status eq lit("failed"), 0.05) // we expect failure rate to not exceed 5% 
+            maxRatioWhen(table.status eq lit("failed"), 0.05) // we expect failure rate to not exceed 5% 
         }
     }
 }

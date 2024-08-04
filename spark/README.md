@@ -24,8 +24,8 @@ ds.assertSeparateQueries { // Logically identical to assert, but under the hood 
     +"someColumn"
     +"someOtherColumn"
     
-    min_sum(Column("revenue"), 100_000) // we're making good money, eh?
-    min_count(100) // averaging $1000/sale is impressive
+    minSum(Column("revenue"), 100_000) // we're making good money, eh?
+    minCount(100) // averaging $1000/sale is impressive
 }
 ```
 

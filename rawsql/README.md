@@ -18,7 +18,7 @@ val wrapper = JDBCSqlWrapper("some:connection:string")
     +"someColumn"
     +"someOtherColumn"
     
-    min_sum("aThirdColumn", 1_000_000)
+    minSum("aThirdColumn", 1_000_000)
     always("email REGEXP '^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$'")
 }
 

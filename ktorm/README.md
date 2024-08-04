@@ -17,7 +17,7 @@ source.assert {
     +table.column1
     +table.column2
     
-    min_count_when(table.column3 eq 50, 10_000) // Because the plugin is parameterized in org.ktorm.schema.ColumnDeclaring, it can take full advantage of the methods available to that class. 
+    minCountWhen(table.column3 eq 50, 10_000) // Because the plugin is parameterized in org.ktorm.schema.ColumnDeclaring, it can take full advantage of the methods available to that class. 
     always(table.column4 gt 0)
 }
 
@@ -25,7 +25,7 @@ source.assert(where = table.column5 eq "2000-01-01") { // will apply the where f
     +table.column1
     +table.column2
 
-    min_count_when(table.column3 eq 50, 10_000)
+    minCountWhen(table.column3 eq 50, 10_000)
     always(table.column4 gt 0)
 }
 ```
