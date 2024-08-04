@@ -6,7 +6,7 @@ It is parameterized in `org.ktorm.dsl.QuerySource` and `org.ktorm.schema.ColumnD
 ### Gradle
 
 ```Kotlin
-testImplementation("io.github.peterattardo.assertainty:ktorm-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:ktorm-plugin:0.2.0")
 ```
 
 ## Usage

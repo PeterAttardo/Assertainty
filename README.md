@@ -70,13 +70,13 @@ Add one or more of the following plugins to your project's `build.gradle`
 
 ```Kotlin
 //Test Plugins
-testImplementation("io.github.peterattardo.assertainty:junit-plugin:0.1.0")
-testImplementation("io.github.peterattardo.assertainty:kotest-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:junit-plugin:0.2.0")
+testImplementation("io.github.peterattardo.assertainty:kotest-plugin:0.2.0")
 //Data Source Plugins
-testImplementation("io.github.peterattardo.assertainty:spark-plugin:0.1.0")
-testImplementation("io.github.peterattardo.assertainty:rawsql-plugin:0.1.0")
-testImplementation("io.github.peterattardo.assertainty:ktorm-plugin:0.1.0")
-testImplementation("io.github.peterattardo.assertainty:exposed-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:spark-plugin:0.2.0")
+testImplementation("io.github.peterattardo.assertainty:rawsql-plugin:0.2.0")
+testImplementation("io.github.peterattardo.assertainty:ktorm-plugin:0.2.0")
+testImplementation("io.github.peterattardo.assertainty:exposed-plugin:0.2.0")
 ```
 
 ## Usage

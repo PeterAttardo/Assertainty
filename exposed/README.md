@@ -6,7 +6,7 @@ It is parameterized in `org.jetbrains.exposed.sql.Table` and `org.jetbrains.expo
 ### Gradle
 
 ```Kotlin
-testImplementation("io.github.peterattardo.assertainty:exposed-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:exposed-plugin:0.2.0")
 ```
 
 ## Usage

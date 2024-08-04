@@ -6,7 +6,7 @@ It is parameterized in `org.apache.spark.sql.Dataset` and `org.apache.spark.sql.
 ### Gradle
 
 ```Kotlin
-testImplementation("io.github.peterattardo.assertainty:spark-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:spark-plugin:0.2.0")
 ```
 
 ## Usage

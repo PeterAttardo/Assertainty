@@ -6,7 +6,7 @@ It is built as an extension function on Kotest's `RootScope`
 ### Gradle
 
 ```Kotlin
-testImplementation("io.github.peterattardo.assertainty:kotest-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:kotest-plugin:0.2.0")
 ```
 
 ## Usage

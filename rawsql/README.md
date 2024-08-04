@@ -7,7 +7,7 @@ The Raw SQL Plugin is parameterized in `String` and `String`; it's strings all t
 ### Gradle
 
 ```Kotlin
-testImplementation("io.github.peterattardo.assertainty:rawsql-plugin:0.1.0")
+testImplementation("io.github.peterattardo.assertainty:rawsql-plugin:0.2.0")
 ```
 
 ## Usage
