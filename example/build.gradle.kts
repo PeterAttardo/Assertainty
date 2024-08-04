@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm")
 }
 
-val assertaintyVersion = "0.1.0"
+val assertaintyVersion = "0.2.0"
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 

@@ -31,8 +31,8 @@ class SparkTest : StringSpec({
         table.assert {
             +"AlbumId"
             +"Composer"
-            min_sum(Column("Milliseconds"), 30 * 60 * 1000, description = "Album length > 30 min")
-            max_sum(Column("Milliseconds"), 50 * 60 * 1000, description = "Album length < 50 min")
+            minSum(Column("Milliseconds"), 30 * 60 * 1000, description = "Album length > 30 min")
+            maxSum(Column("Milliseconds"), 50 * 60 * 1000, description = "Album length < 50 min")
         }
     }
     "test2"(this) {
@@ -41,7 +41,7 @@ class SparkTest : StringSpec({
             .jdbc("jdbc:sqlite::resource:chinook.db", "tracks", Properties())
         table.assert {
             always(Column("UnitPrice") eq 0.99, description = "All priced at $0.99")
-            never_null(Column("Composer"))
+            neverNull(Column("Composer"))
             always(functions.length(Column("Name")) lt 15, description = "Name not excessively long")
         }
     }

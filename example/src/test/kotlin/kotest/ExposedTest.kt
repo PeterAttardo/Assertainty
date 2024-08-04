@@ -23,15 +23,15 @@ class ExposedTest : StringSpec({
         tracks.assert(db) {
             +tracks.albumId
             +tracks.composer
-            min_sum(tracks.milliseconds, 30 * 60 * 1000, description = "Album length > 30 min")
-            max_sum(tracks.milliseconds, 50 * 60 * 1000, description = "Album length < 50 min")
+            minSum(tracks.milliseconds, 30 * 60 * 1000, description = "Album length > 30 min")
+            maxSum(tracks.milliseconds, 50 * 60 * 1000, description = "Album length < 50 min")
         }
     }
 
     "test2"(this, db.columnSerializer()) {
         tracks.assert(db) {
             always(tracks.unitPrice eq 0.99, description = "All priced at $0.99")
-            never_null(tracks.composer)
+            neverNull(tracks.composer)
             always(tracks.name.charLength() less 15, description = "Name not excessively long")
         }
     }
