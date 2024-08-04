@@ -95,24 +95,24 @@ table.assert { // opens an assert block with a `TableScope` as a receiver.
     equal(someAggregationColumn, someOtherAggregationColumn) // assertion that checks if the aggregation is == the other aggregation
     min(someAggregationColumn, thresholdValue) // assertion that checks if the aggregation is >= the threshold
     max(someAggregationColumn, thresholdValue) // assertion that checks if the aggregation is <= the threshold
-    min_sum(someColumn, thresholdValue) // assertion that checks if the sum of the column is >= the threshold
-    max_sum(someColumn, thresholdValue) // assertion that checks if the sum of the column is <= the threshold
-    min_avg(someColumn, thresholdValue) // assertion that checks if the average of the column is >= the threshold
-    max_avg(someColumn, thresholdValue) // assertion that checks if the average of the column is <= the threshold
-    min_count(thresholdValue) // assertion that checks if the count of rows is >= the threshold
-    max_count(thresholdValue) // assertion that checks if the count of rows is <= the threshold
-    min_when(someConditionColumn, thresholdValue) // assertion that checks if the count where the condition is true is >= the threshold
-    max_when(someConditionColumn, thresholdValue) // assertion that checks if the count where the condition is true is <= the threshold
-    min_distinct(someColumn, thresholdValue) // assertion that checks if the count of distinct values of the column >= the threshold
-    max_distinct(someColumn, thresholdValue) // assertion that checks if the count of distinct values of the column <= the threshold
-    min_ratio_when(someConditionColumn, thresholdValue) // assertion that checks if the ratio between the count where the condition is true and the total count is >= the threshold
-    max_ratio_when(someConditionColumn, thresholdValue) // assertion that checks if the ratio between the count where the condition is true and the total count is <= the threshold
-    max_duplicates(someColumn, thresholdValue) // assertion that checks if the number of duplicates is <= the threshold
-    max_duplicate_ratio(someColumn, thresholdValue) // assertion that checks if the ratio of the count of duplicates to the total count is <= the threshold
-    max_null_ratio(someColumn, thresholdValue) // assertion that checks if the ratio of the count of nulls to the total count is <= the threshold
+    minSum(someColumn, thresholdValue) // assertion that checks if the sum of the column is >= the threshold
+    maxSum(someColumn, thresholdValue) // assertion that checks if the sum of the column is <= the threshold
+    minAvg(someColumn, thresholdValue) // assertion that checks if the average of the column is >= the threshold
+    maxAvg(someColumn, thresholdValue) // assertion that checks if the average of the column is <= the threshold
+    minCount(thresholdValue) // assertion that checks if the count of rows is >= the threshold
+    maxCount(thresholdValue) // assertion that checks if the count of rows is <= the threshold
+    minWhen(someConditionColumn, thresholdValue) // assertion that checks if the count where the condition is true is >= the threshold
+    maxWhen(someConditionColumn, thresholdValue) // assertion that checks if the count where the condition is true is <= the threshold
+    minDistinct(someColumn, thresholdValue) // assertion that checks if the count of distinct values of the column >= the threshold
+    maxDistinct(someColumn, thresholdValue) // assertion that checks if the count of distinct values of the column <= the threshold
+    minRatioWhen(someConditionColumn, thresholdValue) // assertion that checks if the ratio between the count where the condition is true and the total count is >= the threshold
+    maxRatioWhen(someConditionColumn, thresholdValue) // assertion that checks if the ratio between the count where the condition is true and the total count is <= the threshold
+    maxDuplicates(someColumn, thresholdValue) // assertion that checks if the number of duplicates is <= the threshold
+    maxDuplicateRatio(someColumn, thresholdValue) // assertion that checks if the ratio of the count of duplicates to the total count is <= the threshold
+    maxNullRatio(someColumn, thresholdValue) // assertion that checks if the ratio of the count of nulls to the total count is <= the threshold
     never(someConditionColumn) // assertion that checks if the condition is never true
     always(someConditionColumn) // assertion that checks if the condition is always true
-    never_null(someColumn) // assertion that checks if the column is never null
+    neverNull(someColumn) // assertion that checks if the column is never null
     unique(someColumn) // assertion that checks that the column has no duplicates
     
     assertion1<Double>(someAggregationColumn) {computedGroups: Map<Column, Any?>, computedMetric: Double ->

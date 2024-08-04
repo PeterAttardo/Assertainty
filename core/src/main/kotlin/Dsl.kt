@@ -33,35 +33,35 @@ abstract class TableScope<Table : Any, Column, NumericColumn: Column, BooleanCol
         +EqualsDataAssertion<Column, Number>(column1, column2, description)
     }
 
-    fun min_sum(column: NumericColumn, minValue: Number, description : String? = null) {
+    fun minSum(column: NumericColumn, minValue: Number, description : String? = null) {
         +MinSumDataAssertion(column, minValue, methods, description)
     }
 
-    fun max_sum(column: NumericColumn, maxValue: Number, description : String? = null) {
+    fun maxSum(column: NumericColumn, maxValue: Number, description : String? = null) {
         +MaxSumDataAssertion(column, maxValue, methods, description)
     }
 
-    fun min_avg(column: NumericColumn, minValue: Number, description : String? = null) {
+    fun minAvg(column: NumericColumn, minValue: Number, description : String? = null) {
         +MinAvgDataAssertion(column, minValue, methods, description)
     }
 
-    fun max_avg(column: NumericColumn, maxValue: Number, description : String? = null) {
+    fun maxAvg(column: NumericColumn, maxValue: Number, description : String? = null) {
         +MaxAvgDataAssertion(column, maxValue, methods, description)
     }
 
-    fun min_count(minValue: Long, description : String? = null) {
+    fun minCount(minValue: Long, description : String? = null) {
         +MinCountDataAssertion(minValue, methods, description)
     }
 
-    fun max_count(maxValue: Long, description : String? = null) {
+    fun maxCount(maxValue: Long, description : String? = null) {
         +MaxCountDataAssertion(maxValue, methods, description)
     }
 
-    fun min_when(condition: BooleanColumn, minCount: Long, description : String? = null) {
+    fun minWhen(condition: BooleanColumn, minCount: Long, description : String? = null) {
         +MinConditionCountDataAssertion(condition, minCount, methods, description)
     }
 
-    fun max_when(condition: BooleanColumn, maxCount: Long, description : String? = null) {
+    fun maxWhen(condition: BooleanColumn, maxCount: Long, description : String? = null) {
         +MaxConditionCountDataAssertion(condition, maxCount, methods, description)
     }
 
@@ -73,31 +73,31 @@ abstract class TableScope<Table : Any, Column, NumericColumn: Column, BooleanCol
         +AlwaysDataAssertion(condition, methods, description)
     }
 
-    fun min_distinct(column: Column, minCount: Long, description : String? = null) {
+    fun minDistinct(column: Column, minCount: Long, description : String? = null) {
         +MinDistinctCountDataAssertion(column, minCount, methods, description)
     }
 
-    fun max_distinct(column: Column, maxCount: Long, description : String? = null) {
+    fun maxDistinct(column: Column, maxCount: Long, description : String? = null) {
         +MaxDistinctCountDataAssertion(column, maxCount, methods, description)
     }
 
-    fun min_ratio_when(condition: BooleanColumn, threshold: Double, description : String? = null) {
+    fun minRatioWhen(condition: BooleanColumn, threshold: Double, description : String? = null) {
         +MinConditionRatioDataAssertion(condition, threshold, methods, description)
     }
 
-    fun max_ratio_when(condition: BooleanColumn, threshold: Double, description : String? = null) {
+    fun maxRatioWhen(condition: BooleanColumn, threshold: Double, description : String? = null) {
         +MaxConditionRatioDataAssertion(condition, threshold, methods, description)
     }
 
-    fun never_null(column: Column, description : String? = null) {
+    fun neverNull(column: Column, description : String? = null) {
         +NeverNullDataAssertion(column, methods, description)
     }
 
-    fun max_duplicate_ratio(column: Column, threshold: Double, description : String? = null) {
+    fun maxDuplicateRatio(column: Column, threshold: Double, description : String? = null) {
         +MaxDuplicateRatioDataAssertion(column, threshold, methods, description)
     }
 
-    fun max_duplicates(column: Column, maxCount: Long, description : String? = null) {
+    fun maxDuplicates(column: Column, maxCount: Long, description : String? = null) {
         +MaxDuplicateCountDataAssertion(column, maxCount, methods, description)
     }
 
@@ -105,7 +105,7 @@ abstract class TableScope<Table : Any, Column, NumericColumn: Column, BooleanCol
         +UniqueDataAssertion(column, methods, description)
     }
 
-    fun max_null_ratio(column: Column, threshold: Double, description : String? = null) {
+    fun maxNullRatio(column: Column, threshold: Double, description : String? = null) {
         +MaxIsNullRatioDataAssertion(column, threshold, methods, description)
     }
 
